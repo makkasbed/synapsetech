@@ -1,3 +1,4 @@
-public enum ProcessStatus {
+public enum ProcessStatus
+{
     SUCCESSFUL, FAILED, PENDING
 }

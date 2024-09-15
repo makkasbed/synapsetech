@@ -17,6 +17,10 @@ public class FetchService : IFetchService
         _logger = logger;
     }
 
+    /// <summary>
+    /// This function connects to the API and fetches all orders available
+    /// </summary>
+    /// <returns></returns>
     public async Task<List<Order>> FetchOrdersAsync()
     {
         //create new list of orders

@@ -9,7 +9,12 @@ namespace SynapseTech.Console.Apis;
 public class MessageService
 {
 
-
+    /// <summary>
+    /// This function gets a delivered order and sends it to the Update API.
+    /// </summary>
+    /// <param name="order"></param>
+    /// <param name="alertApiUrl"></param>
+    /// <returns></returns>
     public static bool SendAlertMessage(Order order, string alertApiUrl)
     {
         bool status = false;

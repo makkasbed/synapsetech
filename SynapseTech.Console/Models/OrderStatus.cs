@@ -1,5 +1,6 @@
 namespace SynapseTech.Console.Models;
 
-public enum OrderStatus {
+public enum OrderStatus
+{
     PENDING, Delivered
 }

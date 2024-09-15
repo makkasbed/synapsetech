@@ -10,33 +10,52 @@ public class ProcessService : IProcessService
 {
     private IConfiguration _configuration;
     private readonly ILogger _logger;
-    
 
-    public ProcessService(IConfiguration configuration,ILogger logger){
+
+    public ProcessService(IConfiguration configuration, ILogger logger)
+    {
         _configuration = configuration;
         _logger = logger;
-       
+
     }
+
+    /// <summary>
+    /// Checks if an order has been delivered
+    /// </summary>
+    /// <param name="order"></param>
+    /// <returns></returns>
     public bool IsDelivered(Order order)
     {
+        _logger.Information($"Checking ordee {order.OrderId} status: {order.Status}");
         return order.Status!.Equals(OrderStatus.Delivered);
     }
-
+    /// <summary>
+    /// Processes an order and return the status
+    /// </summary>
+    /// <param name="order"></param>
+    /// <returns></returns>
     public ProcessStatus ProcessOrder(Order order)
     {
+        _logger.Information($"Processing order: {order.OrderId}");
         //check if order is delivered
-        if(IsDelivered(order)){
+        if (IsDelivered(order))
+        {
 
-           //retrieve alert url
-           var alertApiUrl = _configuration["AlertAPI"]; 
+            //retrieve alert url
+            var alertApiUrl = _configuration["AlertAPI"];
             //send alert message
-           bool status = MessageService.SendAlertMessage(order, alertApiUrl!);
-           if(status){
-             return ProcessStatus.SUCCESSFUL;
-           }else {
-            return ProcessStatus.FAILED;
-           }
-        }else {
+            bool status = MessageService.SendAlertMessage(order, alertApiUrl!);
+            if (status)
+            {
+                return ProcessStatus.SUCCESSFUL;
+            }
+            else
+            {
+                return ProcessStatus.FAILED;
+            }
+        }
+        else
+        {
             return ProcessStatus.PENDING;
         }
     }
