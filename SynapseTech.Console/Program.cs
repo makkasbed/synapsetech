@@ -2,15 +2,15 @@
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using SynapseTech.Console.Apis;
-using SynapseTech.Console.Contracts;
+
 using SynapseTech.Console.Models;
 
 namespace SynapseTech.Console;
 
 public class Program
 {
-    
-    public static async void Main(string[] args)
+
+    public static void Main(string[] args)
     {
 
         // build configuration based on appsettings
@@ -26,7 +26,7 @@ public class Program
         try
         {
             Log.Information("Start of App");
-            ProcessOrders(configuration,Log.Logger);
+            ProcessOrders(configuration, Log.Logger);
             Log.Information("Processing ended");
 
         }
