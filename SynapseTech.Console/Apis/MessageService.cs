@@ -21,13 +21,15 @@ public class MessageService
 
         using (var client = new HttpClient())
         {
-            //fetch API url
+            //prepare message
+            string message = FormatMessage(order);
+            //preprare alert data for alerts api
             var alertData = new
             {
-
+                Message = message,
             };
 
-            //convert the data to acceptable for api call 
+            //convert the data to acceptable form for api call 
             var content = new StringContent(JObject.FromObject(alertData).ToString(), System.Text.Encoding.UTF8, "application/json");
             //make api call
             var response = client.PostAsync(alertApiUrl, content).Result;
@@ -47,5 +49,16 @@ public class MessageService
         }
         return status;
 
+    }
+    private static string FormatMessage(Order order){
+        string message = string.Empty;
+
+        message = $"Alert for delivered order: Order {order.OrderId}: Items:";
+        foreach(var item in order.Items){
+            message += item.Description +"\n";
+        }
+        message += $"Delivery Notification: {order.deliveryNotification+1}";
+
+        return message;
     }
 }
