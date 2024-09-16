@@ -1,4 +1,4 @@
-namespace SynapseTech.Console.Models;
+namespace SynapseTech.MockAPI;
 
 public class Item
 {

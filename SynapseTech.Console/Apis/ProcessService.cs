@@ -27,7 +27,7 @@ public class ProcessService : IProcessService
     public bool IsDelivered(Order order)
     {
         _logger.Information($"Checking order {order.OrderId} status: {order.Status}");
-        return order.Status!.Equals(OrderStatus.Delivered);
+        return order.Status==OrderStatus.Delivered.ToString();
     }
     /// <summary>
     /// Processes an order and return the status

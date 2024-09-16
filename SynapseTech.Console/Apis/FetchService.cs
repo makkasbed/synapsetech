@@ -11,6 +11,7 @@ public class FetchService : IFetchService
     private IConfiguration _configuration;
     private ILogger _logger;
 
+
     public FetchService(IConfiguration configuration, ILogger logger)
     {
         _configuration = configuration;
