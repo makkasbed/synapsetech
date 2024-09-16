@@ -50,6 +50,11 @@ public class MessageService
         return status;
 
     }
+    /// <summary>
+    /// Generates a message by combining the order and item details.
+    /// </summary>
+    /// <param name="order"></param>
+    /// <returns>a formatted string</returns>
     private static string FormatMessage(Order order){
         string message = string.Empty;
 
