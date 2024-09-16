@@ -26,7 +26,7 @@ public class ProcessService : IProcessService
     /// <returns></returns>
     public bool IsDelivered(Order order)
     {
-        _logger.Information($"Checking ordee {order.OrderId} status: {order.Status}");
+        _logger.Information($"Checking order {order.OrderId} status: {order.Status}");
         return order.Status!.Equals(OrderStatus.Delivered);
     }
     /// <summary>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynapseTech.Console", "Syna
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynapseTech.Test", "SynapseTech.Test\SynapseTech.Test.csproj", "{BD601AC1-FCDB-41C0-A55B-5CAF8B40112F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynapseTech.MockAPI", "SynapseTech.MockAPI\SynapseTech.MockAPI.csproj", "{4E8DCF5A-9CEC-48B7-B133-DC3A5F9187FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{BD601AC1-FCDB-41C0-A55B-5CAF8B40112F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD601AC1-FCDB-41C0-A55B-5CAF8B40112F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD601AC1-FCDB-41C0-A55B-5CAF8B40112F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8DCF5A-9CEC-48B7-B133-DC3A5F9187FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8DCF5A-9CEC-48B7-B133-DC3A5F9187FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8DCF5A-9CEC-48B7-B133-DC3A5F9187FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8DCF5A-9CEC-48B7-B133-DC3A5F9187FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

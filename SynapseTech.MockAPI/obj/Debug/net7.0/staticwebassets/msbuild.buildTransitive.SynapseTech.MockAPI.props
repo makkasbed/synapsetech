@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SynapseTech.MockAPI.props" />
+</Project>

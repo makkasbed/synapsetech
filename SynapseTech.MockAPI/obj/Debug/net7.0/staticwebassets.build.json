@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Gny24SzRXYBVcLvbPQLfooCk07VmoyRZN+VCCFk2p2E=",
+  "Source": "SynapseTech.MockAPI",
+  "BasePath": "_content/SynapseTech.MockAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
