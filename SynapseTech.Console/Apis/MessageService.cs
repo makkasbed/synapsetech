@@ -53,7 +53,7 @@ public class MessageService
     private static string FormatMessage(Order order){
         string message = string.Empty;
 
-        message = $"Alert for delivered order: Order {order.OrderId}: Items:";
+        message = $"Alert for delivered order: Order {order.OrderId}.\nItems:";
         foreach(var item in order.Items){
             message += item.Description +"\n";
         }
